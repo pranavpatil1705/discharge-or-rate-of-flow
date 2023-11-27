@@ -355,46 +355,63 @@ const selectCategory = (e, category) => {
       `;
     } else if (option === 'team') {
       contentDiv.innerHTML = `
-      <table>
-      <thead>
-          <tr><th>Number</th>
-              <th>Name</th>
-              
-          </tr>
-      </thead>
-      <tbody>
-          <tr><td>1.</td>
-              <td>Pramod Chandrakant Bhapse</td>
-              
-          </tr>
-          <tr>
-             
-              <td>2.</td>
-              <td>Rohini Vikasgir Gosavi</td>
-          </tr>
-          <tr>
-             
-              <td>3.</td>
-              <td>Vrushali Vijay Wagh</td>
-          </tr>
-          <tr>
-             
-              <td>4.</td>
-              <td>Tanmay Anil Chaudhari</td>
-          </tr>
-          <tr>
-             
-              <td>5.</td>
-              <td>Harshad Kiran Ghuge</td>
-          </tr>
-          <tr>
-              <td>6.</td>
-              <td>Sanket Sandip Shinde</td>
-              
-          </tr>
-      </tbody>
-  </table>
-  
+      <style>
+      table {
+          width: 80%;
+          border-collapse: collapse;
+          margin: 20px;
+          margin: 0 auto;
+      }
+
+      th, td {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+
+      th {
+         
+          color: white;
+      }
+  </style>
+  <table border="2" cellspacing="0" cellpadding="5" class="main">
+  <table>
+  <thead style=" background-color: #4394ff;">
+      <tr>
+          <th>Number</th>
+          <th>Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1.</td>
+          <td>Pramod Chandrakant Bhapse</td>
+      </tr>
+      <tr>
+          <td>2.</td>
+          <td>Rohini Vikasgir Gosavi</td>
+      </tr>
+      <tr>
+          <td>3.</td>
+          <td>Vrushali Vijay Wagh</td>
+      </tr>
+      <tr>
+          <td>4.</td>
+          <td>Tanmay Anil Chaudhari</td>
+      </tr>
+      <tr>
+          <td>5.</td>
+          <td>Harshad Kiran Ghuge</td>
+      </tr>
+      <tr>
+          <td>6.</td>
+          <td>Sanket Sandip Shinde</td>
+      </tr>
+  </tbody>
+</table>
+
+</table>
+
       `;
     } else {
       contentDiv.innerHTML = '';
