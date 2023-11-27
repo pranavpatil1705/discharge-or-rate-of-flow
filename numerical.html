@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatted Formula</title>
+    <style>
+        table {
+            display: table;
+            border-collapse: separate;
+            box-sizing: border-box;
+            text-indent: initial;
+            line-height: normal;
+            font-weight: normal;
+            font-size: medium;
+            font-style: normal;
+            color: -internal-quirk-inherit;
+            text-align: start;
+            border-spacing: 2px;
+            border-color: gray;
+            white-space: normal;
+            font-variant: normal;
+            color: #191818;
+        }
+        table {
+            width: 100%;
+            margin-top: 2em;
+            border-collapse: collapse;
+          }
+          
+          th, td {
+            padding: 1em;
+            border: 1px solid #161414;
+            text-align: center;
+          }
+          
+          th {
+            background-color: #4394ff;
+            color: rgb(17, 16, 16);
+            
+          }
+          
+        center {
+            text-align: -webkit-center;
+        }
+    </style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+    
+    
+    
+    function func1(form) {
+    
+    
+    
+    a=eval(form.a.value);
+    
+    n=eval(form.n.value);
+    
+    p=eval(form.p.value);
+    
+    s=eval(form.s.value);
+    
+    
+    
+    r=a/p;
+    
+    form.r.value=Math.round(r*100)/100;
+    
+    if (form.r.value=="NaN") {form.r.value=""}
+    
+    
+    
+    q=a*1.486/n*Math.pow(r,2/3)*Math.pow(s,.5);
+    
+    form.q.value=Math.round(q*100)/100;
+    
+    if (form.q.value=="NaN") {form.q.value=""}
+    
+    
+    
+    v=q/a;
+    
+    form.v.value=Math.round(v*100)/100;
+    
+    if (form.v.value=="NaN") {form.v.value=""}
+    
+    
+    
+    
+    
+    }
+    
+    
+    
+   
+    
+    </SCRIPT>
+    
+<body>
+    <td valign="top">
+
+      
+
+        <center>
+        
+        <form name="form1">
+        
+        <table border="2" cellspacing="0" cellpadding="5" class="main">
+        
+        <tbody><tr>
+        
+        <th colspan="2"  align="center"  style="color: white;"><h2>Mannings Formula</h2>
+        
+        </th></tr>
+        
+        <tr><td colspan="2"><b>Q = A/n x R<sup>2/3</sup> x S<sup>1/2</sup></b>
+        
+        </td></tr><tr>
+        
+        <td valign="top" class="input">
+        
+        <center><table width="100%" cellpadding="2">
+        
+        <tbody><tr><td colspan="2">
+        
+        <b><u>Input Data:</u></b><p>
+        
+        
+        
+        </p></td></tr><tr><td><b>Area =</b> </td><td><input type="text" size="6" name="a" onchange="func1(this.form)"> ft²
+        
+        </td></tr><tr><td><b>Mannings 'n' =</b> </td><td><input type="text" size="6" name="n" onchange="func1(this.form)"> 
+        
+        </td></tr><tr><td><b>Wetted Perimeter =</b> </td><td><input type="text" size="6" name="p" onchange="func1(this.form)"> ft
+        
+        </td></tr><tr><td><b>Slope =</b> </td><td><input type="text" size="6" name="s" onchange="func1(this.form)"> ft/ft
+        
+        </td></tr></tbody></table>
+        
+        </center></td><td valign="top" class="results">
+        
+        <center><table width="100%" cellpadding="2">
+        
+        <tbody><tr><td colspan="2"><b><u>Results:</u></b><p>
+        
+        
+        
+        </p></td></tr><tr><td><b>Hydraulic Radius =</b> </td><td><input type="text" size="6" name="r"> ft
+        
+        </td></tr><tr><td><b>Flow Rate =</b> </td><td><input type="text" size="6" name="q"> cfs
+        
+        </td></tr><tr><td><b>Velocity =</b> </td><td><input type="text" size="6" name="v"> ft/s
+        
+        </td></tr></tbody></table>
+        
+        
+        
+        </center></td></tr></tbody></table>
+        
+        </form>
+        
+        </center>
+        
+        
+        
+        <div style="margin: 10">
+        
+        <h2>MANNING'S FORMULA</h2>
+        
+        <p>Q = A /n * R<sup>2/3</sup> * S<sup>1/2</sup></p>
+        
+        <ul>
+        
+        <li>Q = Discharge (cu. ft./sec.)
+        
+        </li><li>A = Cross-sectional Area of Flow (sq. ft.)
+        
+        </li><li>n = Coefficient of Roughness
+        
+        </li><li>R = Hydraulic Radius (ft.)
+        
+        </li><li>S = Slope of Pipe (ft./ft.)
+        
+        </li></ul>
+        
+        
+        
+        <h3>Hydraulic Radius</h3>
+        
+        <p>R = A / P</p>
+        
+        <ul>
+        
+        <li>R = Hydraulic Radius (ft.)
+        
+        </li><li>A = Cross-sectional Area of Flow (sq. ft.)
+        
+        </li><li>P = Wetted perimeter (ft.)
+        
+        </li></ul>
+        
+         </div>
+        </td>
+        
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traingluar Formula</title>
+    <style>
+        table {
+            display: table;
+            border-collapse: separate;
+            box-sizing: border-box;
+            text-indent: initial;
+            line-height: normal;
+            font-weight: normal;
+            font-size: medium;
+            font-style: normal;
+            color: -internal-quirk-inherit;
+            text-align: start;
+            border-spacing: 2px;
+            border-color: gray;
+            white-space: normal;
+            font-variant: normal;
+        }
+
+        center {
+            text-align: -webkit-center;
+        }
+    </style>
+</head>
+
+<SCRIPT LANGUAGE="JavaScript">
+    function func1(form) {
+        a = eval(form.a.value);
+        cd = eval(form.cd.value);
+        theta = eval(form.theta.value);
+        g = eval(form.g.value); // gravity value
+        h = eval(form.H.value);
+
+        q = (2 / 3) * cd * Math.tan(theta / 2) * Math.sqrt(2 * g) * Math.pow(h, 5 / 2);
+        form.q.value = Math.round(q * 100) / 100;
+        if (form.q.value == "NaN") { form.q.value = ""; }
+    }
+</SCRIPT>
+
+<body>
+    <td valign="top">
+        <center>
+            <form name="form1">
+                <table border="2" cellspacing="0" cellpadding="5" class="main">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" align="center">
+                                <h2>Notch Formula</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <b>Q = \(\frac{2}{3}C_d\tan\left(\frac{\theta}{2}\right)\sqrt{2g}H^{5/2}\)</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="input">
+                                <center>
+                                    <table width="100%" cellpadding="2">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <b><u>Input Data:</u></b>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Area =</b> </td>
+                                                <td><input type="text" size="6" name="a" onchange="func1(this.form)"> ft²</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Discharge Coefficient (C<sub>d</sub>) =</b> </td>
+                                                <td><input type="text" size="6" name="cd" onchange="func1(this.form)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Notch Angle (\(\theta\)) =</b> </td>
+                                                <td><input type="text" size="6" name="theta" onchange="func1(this.form)"> degrees</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Head (H) =</b> </td>
+                                                <td><input type="text" size="6" name="H" onchange="func1(this.form)"> ft</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Gravity (g) =</b> </td>
+                                                <td><input type="text" size="6" name="g" onchange="func1(this.form)"> ft/s²</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </td>
+                            <td valign="top" class="results">
+                                <center>
+                                    <table width="100%" cellpadding="2">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <b><u>Results:</u></b>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Flow Rate (Q) =</b> </td>
+                                                <td><input type="text" size="6" name="q"> cfs</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </center>
+
+        <div style="margin: 10">
+            <h2>NOTCH FORMULA</h2>
+            <p>Q = \(\frac{2}{3}C_d\tan\left(\frac{\theta}{2}\right)\sqrt{2g}H^{5/2}\)</p>
+            <ul>
+                <li>Q = Discharge (cubic feet per second)</li>
+                <li>C<sub>d</sub> = Discharge Coefficient</li>
+                <li>\(\theta\) = Notch Angle (degrees)</li>
+                <li>H = Head (feet)</li>
+                <li>g = Acceleration due to Gravity (ft/s²)</li>
+            </ul>
+        </div>
+    </td>
+</body>
+
+</html>
